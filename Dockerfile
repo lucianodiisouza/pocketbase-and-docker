@@ -17,3 +17,4 @@ COPY --from=download /pocketbase /usr/local/bin/pocketbase
 EXPOSE 8090
 
 ENTRYPOINT /usr/local/bin/pocketbase serve --http=0.0.0.0:8090 --dir=/root/pocketbase
+CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8080", "/usr/local/bin/pocketbase superuser upsert contato@oprimo.dev 1234567890"]
